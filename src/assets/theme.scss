@@ -1,0 +1,88 @@
+// 亮色主题
+body {
+  background-image: url('/light-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #333333;
+
+  .monitor-card {
+    .monitor-item {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      
+      &:hover {
+        background: rgba(231, 231, 231, 0.9);
+      }
+      
+      &.is-active {
+        background: rgba(231, 231, 231, 0.85);
+      }
+    }
+  }
+
+  .area-tabs {
+    .area-tab-item {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      
+      &:hover {
+        background: rgba(231, 231, 231, 0.9);
+      }
+      
+      &.is-active {
+        background: rgba(0, 95, 231, 0.1);
+      }
+    }
+  }
+
+  .hero {
+    .hero-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+    }
+  }
+}
+
+// 深色主题
+body[arco-theme='dark'] {
+  background-image: url('/dark-bg.jpg');
+  color: #ffffff;
+  
+  .monitor-card {
+    .monitor-item {
+      background: rgba(0, 0, 0, 0.7);
+      border-color: rgba(255, 255, 255, 0.1);
+      
+      &:hover {
+        background: rgba(16, 16, 16, 0.8);
+      }
+      
+      &.is-active {
+        background: rgba(16, 16, 16, 0.75);
+      }
+    }
+  }
+  
+  .area-tabs {
+    .area-tab-item {
+      background: rgba(0, 0, 0, 0.7);
+      border-color: rgba(255, 255, 255, 0.1);
+      
+      &:hover {
+        background: rgba(16, 16, 16, 0.8);
+      }
+      
+      &.is-active {
+        background: rgba(0, 95, 231, 0.2);
+      }
+    }
+  }
+  
+  .hero {
+    .hero-card {
+      background: rgba(0, 0, 0, 0.7);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+} 
