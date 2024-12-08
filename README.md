@@ -19,22 +19,29 @@ Akile Monitor 是一个开源的服务器监控面板前端项目。支持多服
 
 ### 方式一：直接下载
 
-1. 从 [Releases](https://github.com/akile-network/akile_monitor_fe/releases) 下载最新构建版本
+1. 从 [Actions]([https://github.com/akile-network/akile_monitor_fe/releases](https://github.com/Seikoa/akmonitor/actions/runs/12226145824/artifacts/2291174442)) 下载最新构建版本
 2. 解压后修改 `config.json` 文件：
 ```json
 {
-  "socket": "ws://你的服务器IP:3000/ws",
-  "apiURL": "http://你的服务器IP:3000"
+  "socket": "ws://后端主控ip:3000/ws",
+  "apiURL": "http://后端主控ip:3000"
 }
 ```
-3. 将文件部署到您的 Web 服务器
+如果开启tls则
 
+3. 将文件部署到您的 Web 服务器
+```json
+{
+  "socket": "wss://后端主控域名/ws",
+  "apiURL": "http://后端主控域名"
+}
+```
 ### 方式二：手动构建
 
 1. 克隆项目
 ```bash
-git clone https://github.com/akile-network/akile_monitor_fe.git
-cd akile_monitor_fe
+git clone https://github.com/Seikoa/akmonitor.git
+cd akmonitor
 ```
 
 2. 安装依赖
@@ -59,8 +66,8 @@ npm run build
 ### config.json
 ```json
 {
-  "socket": "ws://服务器IP:3000/ws",  // WebSocket 服务器地址
-  "apiURL": "http://服务器IP:3000"    // API 服务器地址
+  "socket": "ws(s)://服务器IP:3000/ws",  // WebSocket 服务器地址
+  "apiURL": "http(s)://服务器IP:3000"    // API 服务器地址
 }
 ```
 
