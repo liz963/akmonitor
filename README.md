@@ -19,7 +19,9 @@ Akile Monitor 是一个开源的服务器监控面板前端项目。支持多服
 
 ### 方式一：直接下载
 
-1. 从 [Actions]([https://github.com/akile-network/akile_monitor_fe/releases](https://github.com/Seikoa/akmonitor/actions/runs/12226145824/artifacts/2291174442)) 下载最新构建版本
+1. 从 [Actions](https://github.com/Seikoa/akmonitor/actions) 页面下载最新构建版本
+   - 进入最新的成功构建记录
+   - 在 Artifacts 区域下载构建文件
 2. 解压后修改 `config.json` 文件：
 ```json
 {
@@ -27,15 +29,16 @@ Akile Monitor 是一个开源的服务器监控面板前端项目。支持多服
   "apiURL": "http://后端主控ip:3000"
 }
 ```
-如果开启tls则
-
-3. 将文件部署到您的 Web 服务器
+  如果开启tls则
 ```json
 {
   "socket": "wss://后端主控域名/ws",
   "apiURL": "http://后端主控域名"
 }
 ```
+
+3. 将文件部署到您的 Web 服务器
+
 ### 方式二：手动构建
 
 1. 克隆项目
